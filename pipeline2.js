@@ -1,11 +1,10 @@
+require('dotenv').config();
+
 // Import the Google Cloud client library
 const { BigQuery } = require('@google-cloud/bigquery');
 
 // Path to your service account key file
-const keyFilename = 'C:\\Users\\Tanishk\\Downloads\\service-key.json';
-
-console.log(keyFilename)
-
+const keyFilename = process.env.pathToKey;
 
 // Create a BigQuery client
 const bigquery = new BigQuery({ keyFilename });
@@ -13,8 +12,6 @@ const bigquery = new BigQuery({ keyFilename });
 // Your dataset ID and table ID
 const datasetId = 'test-project-2-425708.32423asdd2_';
 const tableId = 'property_sales';
-
-// test-project-2-425708.32423asdd2_.property_sales
 
 async function queryBigQuery() {
   // The SQL query to execute
