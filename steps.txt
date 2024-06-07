@@ -1,0 +1,60 @@
+I have the service account
+
+nodeintegration@test-project-2-425708.iam.gserviceaccount.com
+
+
+path to key: 
+
+C:\Users\Tanishk\Downloads\service-key.json
+
+
+
+datasetid:
+test-project-2-425708.32423asdd2_
+
+tableid:
+test-project-2-425708.32423asdd2_.property_sales
+
+
+# BIG ERROR MSG
+
+C:\Users\Tanishk\Downloads\service-key.json
+ERROR: ApiError: Invalid project ID 'test-project-2-425708.32423asdd2_.test-project-2-425708'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.
+    at new ApiError (V:\react-2024\big-query\node_modules\@google-cloud\common\build\src\util.js:75:15)
+    at V:\react-2024\big-query\node_modules\@google-cloud\bigquery\build\src\bigquery.js:1135:23
+    at V:\react-2024\big-query\node_modules\@google-cloud\common\build\src\util.js:412:25
+    at Util.handleResp (V:\react-2024\big-query\node_modules\@google-cloud\common\build\src\util.js:161:9)
+    at V:\react-2024\big-query\node_modules\@google-cloud\common\build\src\util.js:534:22
+    at onResponse (V:\react-2024\big-query\node_modules\retry-request\index.js:259:7)
+    at V:\react-2024\big-query\node_modules\teeny-request\build\src\index.js:226:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: undefined,
+  errors: [
+    {
+      reason: 'invalid',
+      location: 'test-project-2-425708.32423asdd2_.test-project-2-425708.32423asdd2_.property_sales',
+      message: "Invalid project ID 'test-project-2-425708.32423asdd2_.test-project-2-425708'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash."
+    }
+  ],
+  response: {
+    kind: 'bigquery#job',
+    etag: '3H8Rc2pPKST3piYXXTjoZA==',
+    id: 'test-project-2-425708:US.aa5b8380-2c04-4b3e-a3b8-a8f1418673f7',
+    selfLink: 'https://bigquery.googleapis.com/bigquery/v2/projects/test-project-2-425708/jobs/aa5b8380-2c04-4b3e-a3b8-a8f1418673f7?location=US',
+    user_email: 'nodeintegration@test-project-2-425708.iam.gserviceaccount.com',
+    configuration: { query: [Object], jobType: 'QUERY' },
+    jobReference: {
+      projectId: 'test-project-2-425708',
+      jobId: 'aa5b8380-2c04-4b3e-a3b8-a8f1418673f7',
+      location: 'US'
+    },
+    statistics: {
+      creationTime: '1717759151817',
+      startTime: '1717759151843',
+      endTime: '1717759151843'
+    },
+    status: { errorResult: [Object], errors: [Array], state: 'DONE' },
+    principal_subject: 'serviceAccount:nodeintegration@test-project-2-425708.iam.gserviceaccount.com',
+    jobCreationReason: { code: 'REQUESTED' }
+  }
+}
